@@ -6,40 +6,78 @@
     <meta name="description" content="HEATH provides smart technology solutions to transform healthcare and other industries. We align people, processes, and technology for sustainable growth.">
     <title>HEATH - Transforming Healthcare Through Smart Technology</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-slate-50 text-slate-800 font-sans">
 
     <!-- Header -->
-    <header class="bg-white shadow-md">
+    <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/" class="flex items-center">
                 <img src="img/HEATH Logo B transparent.png" alt="HEATH logo" class="h-16 w-auto" />
                 <span class="sr-only">HEATH</span>
             </a>
-            <div class="hidden md:flex space-x-6">
-                <a href="/" class="text-gray-600 hover:text-gray-800">Home</a>
-                <a href="about.html" class="text-gray-600 hover:text-gray-800">About Us</a>
-                <a href="services.html" class="text-gray-600 hover:text-gray-800">Services</a>
-                <a href="product.html" class="text-gray-600 hover:text-gray-800">Ulti-Care</a>
-                <a href="contact.html" class="text-gray-600 hover:text-gray-800">Contact Us</a>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="/" class="text-slate-600 hover:text-sky-600 transition-colors">Home</a>
+                <a href="about.html" class="text-slate-600 hover:text-sky-600 transition-colors">About Us</a>
+                <a href="services.html" class="text-slate-600 hover:text-sky-600 transition-colors">Services</a>
+                <a href="product.html" class="text-slate-600 hover:text-sky-600 transition-colors">Ulti-Care</a>
+                <a href="contact.html" class="bg-sky-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors">Contact Us</a>
             </div>
+            <!-- Mobile Menu Button -->
             <div class="md:hidden">
-                <button class="text-gray-800 focus:outline-none">
+                <button id="mobile-menu-button" class="text-slate-800 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="/" class="block py-2 px-4 text-sm text-slate-600 hover:bg-slate-100">Home</a>
+            <a href="about.html" class="block py-2 px-4 text-sm text-slate-600 hover:bg-slate-100">About Us</a>
+            <a href="services.html" class="block py-2 px-4 text-sm text-slate-600 hover:bg-slate-100">Services</a>
+            <a href="product.html" class="block py-2 px-4 text-sm text-slate-600 hover:bg-slate-100">Ulti-Care</a>
+            <a href="contact.html" class="block py-2 px-4 text-sm text-slate-600 hover:bg-slate-100">Contact Us</a>
+        </div>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
-        <section class="bg-white py-20">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl font-bold text-gray-800 mb-4">Transform Healthcare Through Smart Technology Solutions</h1>
-                <p class="text-lg text-gray-600 mb-8">Sustainable, robust tomorrow through people and technology</p>
-                <a href="services.html" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700">Explore Our Solutions</a>
+        <!-- Hero Slider -->
+        <section class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide" style="background-image:url(https://via.placeholder.com/1920x600/63b3ed/ffffff?text=About+Us)">
+                    <div class="container mx-auto px-6 text-center text-white bg-black bg-opacity-50 p-10 rounded-lg">
+                        <h1 class="text-4xl font-bold mb-4">Discover Our Story</h1>
+                        <p class="text-lg mb-8">Learn more about our mission, vision, and values.</p>
+                        <a href="about.html" class="bg-sky-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-sky-700 transition-colors">Learn More About Us</a>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide" style="background-image:url(https://via.placeholder.com/1920x600/1a202c/ffffff?text=Our+Services)">
+                    <div class="container mx-auto px-6 text-center text-white bg-black bg-opacity-50 p-10 rounded-lg">
+                        <h1 class="text-4xl font-bold mb-4">Explore Our Services</h1>
+                        <p class="text-lg mb-8">Comprehensive solutions for healthcare, finance, and beyond.</p>
+                        <a href="services.html" class="bg-sky-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-sky-700 transition-colors">View Our Services</a>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide" style="background-image:url(https://via.placeholder.com/1920x600/ffffff/000000?text=Ulti-Care)">
+                    <div class="container mx-auto px-6 text-center text-slate-800 bg-white bg-opacity-75 p-10 rounded-lg">
+                        <h1 class="text-4xl font-bold mb-4">Meet Ulti-Care</h1>
+                        <p class="text-lg mb-8">Our flagship AI-powered digital health platform.</p>
+                        <a href="product.html" class="bg-sky-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-sky-700 transition-colors">Discover Ulti-Care</a>
+                    </div>
+                </div>
             </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
         </section>
 
         <!-- Value Propositions -->
@@ -47,20 +85,20 @@
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold mb-2">30+ Years Experience</h3>
-                        <p class="text-gray-600">Combined expertise across multiple sectors.</p>
+                        <h3 class="text-xl font-bold mb-2 text-slate-900">30+ Years Experience</h3>
+                        <p class="text-slate-600">Combined expertise across multiple sectors.</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold mb-2">Complete Solutions</h3>
-                        <p class="text-gray-600">From strategy to ongoing support.</p>
+                        <h3 class="text-xl font-bold mb-2 text-slate-900">Complete Solutions</h3>
+                        <p class="text-slate-600">From strategy to ongoing support.</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold mb-2">Healthcare-First</h3>
-                        <p class="text-gray-600">30+ years combined expertise in healthcare.</p>
+                        <h3 class="text-xl font-bold mb-2 text-slate-900">Healthcare-First</h3>
+                        <p class="text-slate-600">30+ years combined expertise in healthcare.</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold mb-2">Pan-African Reach</h3>
-                        <p class="text-gray-600">Operating across South Africa and Botswana.</p>
+                        <h3 class="text-xl font-bold mb-2 text-slate-900">Pan-African Reach</h3>
+                        <p class="text-slate-600">Operating across South Africa and Botswana.</p>
                     </div>
                 </div>
             </div>
@@ -69,23 +107,24 @@
         <!-- Approach Section -->
         <section class="bg-white py-16">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Approach</h2>
-                <p class="text-lg text-gray-600">VISION. PLAN. EXECUTE. SUPPORT–SUSTAIN.</p>
-                <p class="mt-4 max-w-2xl mx-auto text-gray-600">We don't just implement tech—we build partnerships that last, ensuring your business thrives in a changing world.</p>
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">Our Approach</h2>
+                <p class="text-lg text-slate-600">VISION. PLAN. EXECUTE. SUPPORT–SUSTAIN.</p>
+                <p class="mt-4 max-w-2xl mx-auto text-slate-600">We don't just implement tech—we build partnerships that last, ensuring your business thrives in a changing world.</p>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-slate-900 text-white py-8">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; 2025 HEATH. All rights reserved.</p>
             <div class="flex justify-center space-x-4 mt-4">
-                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
-                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                <a href="#" class="text-slate-400 hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-slate-400 hover:text-white">Terms of Service</a>
             </div>
         </div>
     </footer>
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
