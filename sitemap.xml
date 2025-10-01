@@ -30,4 +30,22 @@
     <priority>0.8</priority>
     <lastmod>2025-10-01</lastmod>
   </url>
+  <url>
+    <loc>https://qwezzy.github.io/heathafrica-website/privacy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2025-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://qwezzy.github.io/heathafrica-website/terms.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2025-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://qwezzy.github.io/heathafrica-website/thank-you.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <lastmod>2025-10-01</lastmod>
+  </url>
 </urlset>
