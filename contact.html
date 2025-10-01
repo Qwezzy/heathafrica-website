@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact HEATH to learn how our smart technology solutions can transform your organization. Reach out to our teams in Botswana and South Africa.">
+    <link rel="canonical" href="https://qwezzy.github.io/heathafrica-website/contact.html" />
+    <meta property="og:site_name" content="HEATH" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Contact Us - HEATH" />
+    <meta property="og:description" content="Get in touch with HEATH in Botswana and South Africa." />
+    <meta property="og:url" content="https://qwezzy.github.io/heathafrica-website/contact.html" />
+    <meta property="og:image" content="https://qwezzy.github.io/heathafrica-website/img/HEATH%20Logo%20B%20transparent.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact Us - HEATH" />
+    <meta name="twitter:description" content="Get in touch with HEATH in Botswana and South Africa." />
+    <meta name="twitter:image" content="https://qwezzy.github.io/heathafrica-website/img/HEATH%20Logo%20B%20transparent.png" />
     <title>Contact Us - HEATH</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -78,7 +89,15 @@
             <!-- Contact Form -->
             <div class="bg-white p-8 rounded-lg shadow-md">
                 <h2 class="text-2xl font-bold mb-6 text-slate-900">Send Us a Message</h2>
-                <form action="#" method="POST">
+                <form action="https://formsubmit.co/contact@heathafrica.com" method="POST">
+                    <!-- Spam prevention honeypot field -->
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                    <!-- Redirect after successful submit -->
+                    <input type="hidden" name="_next" value="https://qwezzy.github.io/heathafrica-website/thank-you.html">
+                    <!-- Disable CAPTCHA (optional) -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Email subject -->
+                    <input type="hidden" name="_subject" value="New HEATH website inquiry">
                     <div class="mb-4">
                         <label for="name" class="block text-slate-700 font-semibold mb-2">Name</label>
                         <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required>
