@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Swiper styles will be added here */
+
+/* Global accessibility styles */
+@layer base {
+  /* Ensure focus is visible for keyboard navigation */
+  *:focus-visible {
+    outline: 2px solid theme('colors.sky.500');
+    outline-offset: 2px;
+  }
+  
+  /* Skip to main content link for screen readers */
+  .skip-to-main {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: theme('colors.sky.600');
+    color: white;
+    text-decoration: none;
+  }
+  
+  .skip-to-main:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+  }
+  
+  /* Ensure all interactive elements have smooth transitions */
+  button, a, input, textarea, select {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+}
